@@ -1,0 +1,16 @@
+Classes
+
+BlackjackEngine
+This is the game engine that manages the deck and coordinates player bets/decisions.
+
+Player
+Object representing a player who has a bankroll, can take multiple seats at a table, and will make game decisions when prompted.
+
+Shuffler
+The shuffler keeps track of the shoe and deals/shuffles cards upon the game engine's request.
+
+Counter
+Any object that implements the counter interface can subscribe to all card updates from the game engine to keep track of the count.
+
+Todo
+Maybe use additional interfaces to support different game types (double down, free bet, 22 is push for dealer)
