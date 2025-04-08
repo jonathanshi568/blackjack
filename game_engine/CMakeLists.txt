@@ -12,8 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(SRCS
     main.cpp
     BlackjackEngine.cpp
-    Shuffler.cpp
+    Deck.cpp
     Player.cpp
+    Sim.cpp
     types.cpp
     util.cpp
 )
@@ -22,8 +23,9 @@ set(SRCS
 set(HEADERS
     types.hpp
     BlackjackEngine.hpp
-    Shuffler.hpp
+    Deck.hpp
     Player.hpp
+    Sim.hpp
     types.hpp
     util.hpp
 )

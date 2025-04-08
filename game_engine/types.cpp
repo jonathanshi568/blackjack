@@ -25,6 +25,15 @@ void Hand::addCard(const Card& card)
     cards.push_back(card);
 }
 
+void Hand::popCard()
+{
+    auto tmpCards = cards;
+    reset();
+    for (int i = 0; i < tmpCards.size() - 1; i++) {
+        addCard(tmpCards[i]);
+    }
+}
+
 Hand Hand::split()
 {
     return Hand{};

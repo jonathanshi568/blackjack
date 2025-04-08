@@ -5,16 +5,17 @@
 namespace jshi_blackjack {
 
 /*
-Shufflers must implement the following methods:
+Decks must implement the following methods:
 void initialize(const GameConfig& gameConfig);
 Card dealCard();
 void shuffle();
 bool needsShuffle() const;
+std::vector<double> probabilities() const;
 */
 
-class MTShuffler {
+class MTDeck {
 public:
-    MTShuffler();
+    MTDeck();
 
     Card dealCard();
     void shuffleIfNeeded();
@@ -32,6 +33,23 @@ private:
     int cardsRemaining{};
     int penetration{};
 
+};
+
+class InfiniteDeck
+{
+public:
+    InfiniteDeck();
+
+    Card dealCard();
+    void shuffle() {};
+    bool needsShuffle() const { return false; };
+    std::vector<double> probabilities() { return probabilities_; }
+
+private:
+    std::random_device rd_;
+    std::mt19937 gen_;
+
+    std::vector<double> probabilities_;
 };
 
 } // namespace jshi_blackjack

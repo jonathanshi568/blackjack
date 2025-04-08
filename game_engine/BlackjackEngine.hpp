@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Shuffler.hpp"
+#include "Deck.hpp"
 #include "Player.hpp"
 #include "util.hpp"
 
@@ -15,7 +15,7 @@ struct Seat {
     void resetHand();
 };
 
-template <typename ShufflerT>
+template <typename DeckT>
 class BlackjackEngine
 {
 public:
@@ -36,20 +36,20 @@ private:
 
 private:
     GameConfig gameConfig;
-    ShufflerT shuffler_;
+    DeckT deck_;
     Hand dealerHand_;
     std::vector<Seat> seats_;
 };
 
-template <typename ShufflerT>
-BlackjackEngine<ShufflerT>::BlackjackEngine()
+template <typename DeckT>
+BlackjackEngine<DeckT>::BlackjackEngine()
 {
     const auto& gameConfig = *GameConfig::getInstance();
     seats_.resize(gameConfig.seats);
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::resetHands()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::resetHands()
 {
     dealerHand_.reset();
     for (Seat& seat : seats_) {
@@ -57,8 +57,8 @@ void BlackjackEngine<ShufflerT>::resetHands()
     }
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::askForBets()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::askForBets()
 {
     for (Seat& seat : seats_) {
         if (seat.player) {
@@ -67,21 +67,21 @@ void BlackjackEngine<ShufflerT>::askForBets()
     }
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::dealCards()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::dealCards()
 {
     for (int i = 0; i < 2; i++) {
         for (Seat& seat : seats_) {
             if (seat.player) {
-                seat.hand.addCard(shuffler_.dealCard());
+                seat.hand.addCard(deck_.dealCard());
             }
         }
-        dealerHand_.addCard(shuffler_.dealCard());
+        dealerHand_.addCard(deck_.dealCard());
     }
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::dealerAction()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::dealerAction()
 {
     bool dealerNeedsToPlay = std::any_of(seats_.begin(), seats_.end(), [](const auto& seat) { return seat.player && !(seat.hand.busted() || seat.hand.isBlackjack()); });
     if (dealerNeedsToPlay) {
@@ -90,13 +90,13 @@ void BlackjackEngine<ShufflerT>::dealerAction()
                 // hit/stand soft 17
                 break;
             }
-            dealerHand_.addCard(shuffler_.dealCard());
+            dealerHand_.addCard(deck_.dealCard());
         }
     }
 }
 
-template <typename ShufflerT>
-HandResult BlackjackEngine<ShufflerT>::getHandResult(const Hand& playerHand) const
+template <typename DeckT>
+HandResult BlackjackEngine<DeckT>::getHandResult(const Hand& playerHand) const
 {
     if (!playerHand.busted()) {
         if (dealerHand_.busted() || playerHand.total > dealerHand_.total) {
@@ -109,8 +109,8 @@ HandResult BlackjackEngine<ShufflerT>::getHandResult(const Hand& playerHand) con
     return HandResult::LOSE;
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::payout()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::payout()
 {
     for (Seat& seat : seats_) {
         if (seat.player) {
@@ -129,8 +129,8 @@ void BlackjackEngine<ShufflerT>::payout()
     }
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::askForInsurance()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::askForInsurance()
 {
     for (Seat& seat : seats_) {
         if (seat.player && seat.player->buyInsurance(seat.bet / 2.0)) {
@@ -139,8 +139,8 @@ void BlackjackEngine<ShufflerT>::askForInsurance()
     }
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::payoutInsurance()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::payoutInsurance()
 {
     for (Seat& seat : seats_) {
         if (seat.player && seat.boughtInsurance) {
@@ -149,8 +149,8 @@ void BlackjackEngine<ShufflerT>::payoutInsurance()
     }
 }
 
-template <typename ShufflerT>
-void BlackjackEngine<ShufflerT>::startRound()
+template <typename DeckT>
+void BlackjackEngine<DeckT>::startRound()
 {
     resetHands();
     askForBets();
@@ -172,13 +172,13 @@ void BlackjackEngine<ShufflerT>::startRound()
                 bool done = false;
                 switch (a) {
                 case Action::HIT:
-                    seat.hand.addCard(shuffler_.dealCard());
+                    seat.hand.addCard(deck_.dealCard());
                     if (seat.hand.total >= HAND_VALUE_MAX) {
                         done = true;
                     }
                     break;
                 case Action::DOUBLE:
-                    seat.hand.addCard(shuffler_.dealCard());
+                    seat.hand.addCard(deck_.dealCard());
                     done = true;
                     break;
                 case Action::STAND:
@@ -201,8 +201,8 @@ void BlackjackEngine<ShufflerT>::startRound()
     payout();
 }
 
-template <typename ShufflerT>
-bool BlackjackEngine<ShufflerT>::sitPlayer(const std::shared_ptr<IPlayer>& player, int seat)
+template <typename DeckT>
+bool BlackjackEngine<DeckT>::sitPlayer(const std::shared_ptr<IPlayer>& player, int seat)
 {
     if (seat >= static_cast<int>(seats_.size())) {
         return false;

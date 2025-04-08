@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jshi/jshi/blackjack/blackjack/game_engine
+CMAKE_SOURCE_DIR = /home/jshi/blackjack/game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jshi/jshi/blackjack/blackjack/game_engine
+CMAKE_BINARY_DIR = /home/jshi/blackjack/game_engine
 
 # Include any dependencies generated for this target.
 include CMakeFiles/blackjack_engine.dir/depend.make
@@ -72,93 +72,108 @@ include CMakeFiles/blackjack_engine.dir/flags.make
 CMakeFiles/blackjack_engine.dir/main.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
 CMakeFiles/blackjack_engine.dir/main.cpp.o: main.cpp
 CMakeFiles/blackjack_engine.dir/main.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/blackjack_engine.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/main.cpp.o -MF CMakeFiles/blackjack_engine.dir/main.cpp.o.d -o CMakeFiles/blackjack_engine.dir/main.cpp.o -c /home/jshi/jshi/blackjack/blackjack/game_engine/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/blackjack_engine.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/main.cpp.o -MF CMakeFiles/blackjack_engine.dir/main.cpp.o.d -o CMakeFiles/blackjack_engine.dir/main.cpp.o -c /home/jshi/blackjack/game_engine/main.cpp
 
 CMakeFiles/blackjack_engine.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/jshi/blackjack/blackjack/game_engine/main.cpp > CMakeFiles/blackjack_engine.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/main.cpp > CMakeFiles/blackjack_engine.dir/main.cpp.i
 
 CMakeFiles/blackjack_engine.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/jshi/blackjack/blackjack/game_engine/main.cpp -o CMakeFiles/blackjack_engine.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/main.cpp -o CMakeFiles/blackjack_engine.dir/main.cpp.s
 
 CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
 CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o: BlackjackEngine.cpp
 CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o -MF CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o.d -o CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o -c /home/jshi/jshi/blackjack/blackjack/game_engine/BlackjackEngine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o -MF CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o.d -o CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o -c /home/jshi/blackjack/game_engine/BlackjackEngine.cpp
 
 CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/jshi/blackjack/blackjack/game_engine/BlackjackEngine.cpp > CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/BlackjackEngine.cpp > CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.i
 
 CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/jshi/blackjack/blackjack/game_engine/BlackjackEngine.cpp -o CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/BlackjackEngine.cpp -o CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.s
 
-CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
-CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o: Shuffler.cpp
-CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o -MF CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o.d -o CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o -c /home/jshi/jshi/blackjack/blackjack/game_engine/Shuffler.cpp
+CMakeFiles/blackjack_engine.dir/Deck.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
+CMakeFiles/blackjack_engine.dir/Deck.cpp.o: Deck.cpp
+CMakeFiles/blackjack_engine.dir/Deck.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/blackjack_engine.dir/Deck.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/Deck.cpp.o -MF CMakeFiles/blackjack_engine.dir/Deck.cpp.o.d -o CMakeFiles/blackjack_engine.dir/Deck.cpp.o -c /home/jshi/blackjack/game_engine/Deck.cpp
 
-CMakeFiles/blackjack_engine.dir/Shuffler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/Shuffler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/jshi/blackjack/blackjack/game_engine/Shuffler.cpp > CMakeFiles/blackjack_engine.dir/Shuffler.cpp.i
+CMakeFiles/blackjack_engine.dir/Deck.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/Deck.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/Deck.cpp > CMakeFiles/blackjack_engine.dir/Deck.cpp.i
 
-CMakeFiles/blackjack_engine.dir/Shuffler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/Shuffler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/jshi/blackjack/blackjack/game_engine/Shuffler.cpp -o CMakeFiles/blackjack_engine.dir/Shuffler.cpp.s
+CMakeFiles/blackjack_engine.dir/Deck.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/Deck.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/Deck.cpp -o CMakeFiles/blackjack_engine.dir/Deck.cpp.s
 
 CMakeFiles/blackjack_engine.dir/Player.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
 CMakeFiles/blackjack_engine.dir/Player.cpp.o: Player.cpp
 CMakeFiles/blackjack_engine.dir/Player.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/blackjack_engine.dir/Player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/Player.cpp.o -MF CMakeFiles/blackjack_engine.dir/Player.cpp.o.d -o CMakeFiles/blackjack_engine.dir/Player.cpp.o -c /home/jshi/jshi/blackjack/blackjack/game_engine/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/blackjack_engine.dir/Player.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/Player.cpp.o -MF CMakeFiles/blackjack_engine.dir/Player.cpp.o.d -o CMakeFiles/blackjack_engine.dir/Player.cpp.o -c /home/jshi/blackjack/game_engine/Player.cpp
 
 CMakeFiles/blackjack_engine.dir/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/jshi/blackjack/blackjack/game_engine/Player.cpp > CMakeFiles/blackjack_engine.dir/Player.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/Player.cpp > CMakeFiles/blackjack_engine.dir/Player.cpp.i
 
 CMakeFiles/blackjack_engine.dir/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/jshi/blackjack/blackjack/game_engine/Player.cpp -o CMakeFiles/blackjack_engine.dir/Player.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/Player.cpp -o CMakeFiles/blackjack_engine.dir/Player.cpp.s
+
+CMakeFiles/blackjack_engine.dir/Sim.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
+CMakeFiles/blackjack_engine.dir/Sim.cpp.o: Sim.cpp
+CMakeFiles/blackjack_engine.dir/Sim.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/blackjack_engine.dir/Sim.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/Sim.cpp.o -MF CMakeFiles/blackjack_engine.dir/Sim.cpp.o.d -o CMakeFiles/blackjack_engine.dir/Sim.cpp.o -c /home/jshi/blackjack/game_engine/Sim.cpp
+
+CMakeFiles/blackjack_engine.dir/Sim.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/Sim.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/Sim.cpp > CMakeFiles/blackjack_engine.dir/Sim.cpp.i
+
+CMakeFiles/blackjack_engine.dir/Sim.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/Sim.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/Sim.cpp -o CMakeFiles/blackjack_engine.dir/Sim.cpp.s
 
 CMakeFiles/blackjack_engine.dir/types.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
 CMakeFiles/blackjack_engine.dir/types.cpp.o: types.cpp
 CMakeFiles/blackjack_engine.dir/types.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/blackjack_engine.dir/types.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/types.cpp.o -MF CMakeFiles/blackjack_engine.dir/types.cpp.o.d -o CMakeFiles/blackjack_engine.dir/types.cpp.o -c /home/jshi/jshi/blackjack/blackjack/game_engine/types.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/blackjack_engine.dir/types.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/types.cpp.o -MF CMakeFiles/blackjack_engine.dir/types.cpp.o.d -o CMakeFiles/blackjack_engine.dir/types.cpp.o -c /home/jshi/blackjack/game_engine/types.cpp
 
 CMakeFiles/blackjack_engine.dir/types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/types.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/jshi/blackjack/blackjack/game_engine/types.cpp > CMakeFiles/blackjack_engine.dir/types.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/types.cpp > CMakeFiles/blackjack_engine.dir/types.cpp.i
 
 CMakeFiles/blackjack_engine.dir/types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/types.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/jshi/blackjack/blackjack/game_engine/types.cpp -o CMakeFiles/blackjack_engine.dir/types.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/types.cpp -o CMakeFiles/blackjack_engine.dir/types.cpp.s
 
 CMakeFiles/blackjack_engine.dir/util.cpp.o: CMakeFiles/blackjack_engine.dir/flags.make
 CMakeFiles/blackjack_engine.dir/util.cpp.o: util.cpp
 CMakeFiles/blackjack_engine.dir/util.cpp.o: CMakeFiles/blackjack_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/blackjack_engine.dir/util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/util.cpp.o -MF CMakeFiles/blackjack_engine.dir/util.cpp.o.d -o CMakeFiles/blackjack_engine.dir/util.cpp.o -c /home/jshi/jshi/blackjack/blackjack/game_engine/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/blackjack_engine.dir/util.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/blackjack_engine.dir/util.cpp.o -MF CMakeFiles/blackjack_engine.dir/util.cpp.o.d -o CMakeFiles/blackjack_engine.dir/util.cpp.o -c /home/jshi/blackjack/game_engine/util.cpp
 
 CMakeFiles/blackjack_engine.dir/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/blackjack_engine.dir/util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/jshi/blackjack/blackjack/game_engine/util.cpp > CMakeFiles/blackjack_engine.dir/util.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jshi/blackjack/game_engine/util.cpp > CMakeFiles/blackjack_engine.dir/util.cpp.i
 
 CMakeFiles/blackjack_engine.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/blackjack_engine.dir/util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/jshi/blackjack/blackjack/game_engine/util.cpp -o CMakeFiles/blackjack_engine.dir/util.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jshi/blackjack/game_engine/util.cpp -o CMakeFiles/blackjack_engine.dir/util.cpp.s
 
 # Object files for target blackjack_engine
 blackjack_engine_OBJECTS = \
 "CMakeFiles/blackjack_engine.dir/main.cpp.o" \
 "CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o" \
-"CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o" \
+"CMakeFiles/blackjack_engine.dir/Deck.cpp.o" \
 "CMakeFiles/blackjack_engine.dir/Player.cpp.o" \
+"CMakeFiles/blackjack_engine.dir/Sim.cpp.o" \
 "CMakeFiles/blackjack_engine.dir/types.cpp.o" \
 "CMakeFiles/blackjack_engine.dir/util.cpp.o"
 
@@ -167,13 +182,14 @@ blackjack_engine_EXTERNAL_OBJECTS =
 
 blackjack_engine: CMakeFiles/blackjack_engine.dir/main.cpp.o
 blackjack_engine: CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.o
-blackjack_engine: CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o
+blackjack_engine: CMakeFiles/blackjack_engine.dir/Deck.cpp.o
 blackjack_engine: CMakeFiles/blackjack_engine.dir/Player.cpp.o
+blackjack_engine: CMakeFiles/blackjack_engine.dir/Sim.cpp.o
 blackjack_engine: CMakeFiles/blackjack_engine.dir/types.cpp.o
 blackjack_engine: CMakeFiles/blackjack_engine.dir/util.cpp.o
 blackjack_engine: CMakeFiles/blackjack_engine.dir/build.make
 blackjack_engine: CMakeFiles/blackjack_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable blackjack_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jshi/blackjack/game_engine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable blackjack_engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/blackjack_engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -185,6 +201,6 @@ CMakeFiles/blackjack_engine.dir/clean:
 .PHONY : CMakeFiles/blackjack_engine.dir/clean
 
 CMakeFiles/blackjack_engine.dir/depend:
-	cd /home/jshi/jshi/blackjack/blackjack/game_engine && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jshi/jshi/blackjack/blackjack/game_engine /home/jshi/jshi/blackjack/blackjack/game_engine /home/jshi/jshi/blackjack/blackjack/game_engine /home/jshi/jshi/blackjack/blackjack/game_engine /home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles/blackjack_engine.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/jshi/blackjack/game_engine && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jshi/blackjack/game_engine /home/jshi/blackjack/game_engine /home/jshi/blackjack/game_engine /home/jshi/blackjack/game_engine /home/jshi/blackjack/game_engine/CMakeFiles/blackjack_engine.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/blackjack_engine.dir/depend
 

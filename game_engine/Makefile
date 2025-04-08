@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jshi/jshi/blackjack/blackjack/game_engine
+CMAKE_SOURCE_DIR = /home/jshi/blackjack/game_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jshi/jshi/blackjack/blackjack/game_engine
+CMAKE_BINARY_DIR = /home/jshi/blackjack/game_engine
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles /home/jshi/jshi/blackjack/blackjack/game_engine//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jshi/blackjack/game_engine/CMakeFiles /home/jshi/blackjack/game_engine//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jshi/jshi/blackjack/blackjack/game_engine/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jshi/blackjack/game_engine/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ BlackjackEngine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/BlackjackEngine.cpp.s
 .PHONY : BlackjackEngine.cpp.s
 
+Deck.o: Deck.cpp.o
+.PHONY : Deck.o
+
+# target to build an object file
+Deck.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Deck.cpp.o
+.PHONY : Deck.cpp.o
+
+Deck.i: Deck.cpp.i
+.PHONY : Deck.i
+
+# target to preprocess a source file
+Deck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Deck.cpp.i
+.PHONY : Deck.cpp.i
+
+Deck.s: Deck.cpp.s
+.PHONY : Deck.s
+
+# target to generate assembly for a file
+Deck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Deck.cpp.s
+.PHONY : Deck.cpp.s
+
 Player.o: Player.cpp.o
 .PHONY : Player.o
 
@@ -177,29 +201,29 @@ Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Player.cpp.s
 .PHONY : Player.cpp.s
 
-Shuffler.o: Shuffler.cpp.o
-.PHONY : Shuffler.o
+Sim.o: Sim.cpp.o
+.PHONY : Sim.o
 
 # target to build an object file
-Shuffler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Shuffler.cpp.o
-.PHONY : Shuffler.cpp.o
+Sim.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Sim.cpp.o
+.PHONY : Sim.cpp.o
 
-Shuffler.i: Shuffler.cpp.i
-.PHONY : Shuffler.i
+Sim.i: Sim.cpp.i
+.PHONY : Sim.i
 
 # target to preprocess a source file
-Shuffler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Shuffler.cpp.i
-.PHONY : Shuffler.cpp.i
+Sim.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Sim.cpp.i
+.PHONY : Sim.cpp.i
 
-Shuffler.s: Shuffler.cpp.s
-.PHONY : Shuffler.s
+Sim.s: Sim.cpp.s
+.PHONY : Sim.s
 
 # target to generate assembly for a file
-Shuffler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Shuffler.cpp.s
-.PHONY : Shuffler.cpp.s
+Sim.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/blackjack_engine.dir/build.make CMakeFiles/blackjack_engine.dir/Sim.cpp.s
+.PHONY : Sim.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -285,12 +309,15 @@ help:
 	@echo "... BlackjackEngine.o"
 	@echo "... BlackjackEngine.i"
 	@echo "... BlackjackEngine.s"
+	@echo "... Deck.o"
+	@echo "... Deck.i"
+	@echo "... Deck.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
-	@echo "... Shuffler.o"
-	@echo "... Shuffler.i"
-	@echo "... Shuffler.s"
+	@echo "... Sim.o"
+	@echo "... Sim.i"
+	@echo "... Sim.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -6,7 +6,7 @@ This is the game engine that manages the deck and coordinates player bets/decisi
 Player
 Object representing a player who has a bankroll, can take multiple seats at a table, and will make game decisions when prompted.
 
-Shuffler
+Deck
 The shuffler keeps track of the shoe and deals/shuffles cards upon the game engine's request.
 
 Counter

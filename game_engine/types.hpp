@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <iostream>
+#include <map>
 #include <memory>
 #include <random>
 #include <sstream>
@@ -13,6 +14,8 @@ namespace jshi_blackjack {
 
 constexpr char CARD_VALUES[] = {'2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'};
 constexpr char CARD_SUITS[] = {'S', 'H', 'D', 'C'};
+constexpr int NUM_CARD_VALUES = 13;
+constexpr int NUM_SUITS = 4; 
 constexpr int HAND_VALUE_MAX = 21;
 constexpr int DEALER_STAND_VALUE = 17;
 const std::unordered_map<char, short> RANK_TO_VALUE = {
@@ -54,6 +57,7 @@ enum class HandResult {
 };
 
 struct Card {
+    Card() {}
     Card(char rank, char suit) : value{RANK_TO_VALUE.at(rank)}, rank{rank}, suit{suit} {}
     short value;
     char rank;
@@ -70,6 +74,7 @@ struct Hand {
     bool canSurrender;
 
     void addCard(const Card& card);
+    void popCard();
     Hand split();
     void reset();
     bool busted() const;
@@ -99,6 +104,27 @@ public:
         }
         return instance;
     }
+};
+
+enum class DealerResults {
+    _17 = 0,
+    _18 = 1,
+    _19 = 2,
+    _20 = 3,
+    _21 = 4,
+    _BJ = 5,
+    _BUST = 6,
+    _DEALER_RESULTS_MAX = 7
+};
+
+const std::unordered_map<DealerResults, std::string> DEALER_RESULTS_TO_STR = {
+    {DealerResults::_17, "17"},
+    {DealerResults::_18, "18"},
+    {DealerResults::_19, "19"},
+    {DealerResults::_20, "20"},
+    {DealerResults::_21, "21"},
+    {DealerResults::_BJ, "BJ"},
+    {DealerResults::_BUST, "BUST"},
 };
 
 } // namespace jshi_blackjack
