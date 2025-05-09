@@ -44,7 +44,7 @@ InfiniteDeck::InfiniteDeck() : gen_{rd_()}
 
 Card InfiniteDeck::dealCard()
 {
-    
+    return Card{};
 }
 
 } // namespace jshi_blackjack

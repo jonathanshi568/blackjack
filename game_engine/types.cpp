@@ -11,10 +11,15 @@ void Hand::addCard(const Card& card)
         canSplit = true;
     }
 
-    total += card.value;
-
     if (card.rank == 'A') {
-        soft = true;
+        if (total > 10) {
+            total += 1;
+        } else {
+            total += card.value;
+            soft = true;
+        }
+    } else {
+        total += card.value;
     }
 
     if (soft && total > HAND_VALUE_MAX) {
@@ -29,7 +34,7 @@ void Hand::popCard()
 {
     auto tmpCards = cards;
     reset();
-    for (int i = 0; i < tmpCards.size() - 1; i++) {
+    for (size_t i = 0; i < tmpCards.size() - 1; i++) {
         addCard(tmpCards[i]);
     }
 }

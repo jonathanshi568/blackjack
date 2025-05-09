@@ -112,8 +112,8 @@ enum class DealerResults {
     _19 = 2,
     _20 = 3,
     _21 = 4,
-    _BJ = 5,
-    _BUST = 6,
+    _BUST = 5,
+    _BJ = 6,
     _DEALER_RESULTS_MAX = 7
 };
 
